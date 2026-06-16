@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-label="Aircraft control law and validation loop">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#63e6be"/><stop offset="1" stop-color="#7aa7ff"/></linearGradient><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#63e6be"/></marker></defs>
+  <rect width="980" height="420" rx="32" fill="#081625"/>
+  <text x="50" y="58" font-family="Inter,Arial" font-size="28" font-weight="900" fill="#edf4ff">Aircraft Control Strategy: MIL / SIL / HIL</text>
+  <g font-family="Inter,Arial" fill="#edf4ff" font-weight="800">
+    <g><rect x="55" y="142" width="160" height="92" rx="18" fill="#10243c" stroke="#274466"/><text x="135" y="180" text-anchor="middle">Plant Model</text><text x="135" y="207" text-anchor="middle" font-size="13" fill="#9fb2c9">VTOL / MALE</text></g>
+    <g><rect x="270" y="142" width="160" height="92" rx="18" fill="#10243c" stroke="#274466"/><text x="350" y="180" text-anchor="middle">Control Laws</text><text x="350" y="207" text-anchor="middle" font-size="13" fill="#9fb2c9">PID / autopilot</text></g>
+    <g><rect x="485" y="142" width="160" height="92" rx="18" fill="#10243c" stroke="#274466"/><text x="565" y="180" text-anchor="middle">Validation</text><text x="565" y="207" text-anchor="middle" font-size="13" fill="#9fb2c9">MIL • SIL • HIL</text></g>
+    <g><rect x="700" y="142" width="220" height="92" rx="18" fill="url(#g)"/><text x="810" y="180" text-anchor="middle" fill="#06101d">Robustness Evidence</text><text x="810" y="207" text-anchor="middle" font-size="13" fill="#06101d">stability • architecture • tuning</text></g>
+  </g>
+  <g stroke="#63e6be" stroke-width="4" marker-end="url(#a)"><line x1="220" y1="188" x2="263" y2="188"/><line x1="435" y1="188" x2="478" y2="188"/><line x1="650" y1="188" x2="693" y2="188"/></g>
+  <path d="M810 250 C690 332 280 332 135 245" fill="none" stroke="#7aa7ff" stroke-width="3" stroke-dasharray="8 10" marker-end="url(#a)"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" role="img" aria-label="Smart grid automation file generation workflow">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#63e6be"/><stop offset="1" stop-color="#7aa7ff"/></linearGradient><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#63e6be"/></marker></defs>
+  <rect width="980" height="420" rx="32" fill="#081625"/>
+  <text x="50" y="58" font-family="Inter,Arial" font-size="28" font-weight="900" fill="#edf4ff">Smart Grid Automation: IEC 61850 + CIM</text>
+  <g font-family="Inter,Arial" font-weight="800" fill="#edf4ff">
+    <g><rect x="50" y="128" width="160" height="108" rx="18" fill="#10243c" stroke="#274466"/><text x="130" y="172" text-anchor="middle">ICD Template</text><text x="130" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">IED model</text></g>
+    <g><rect x="270" y="128" width="160" height="108" rx="18" fill="#10243c" stroke="#274466"/><text x="350" y="172" text-anchor="middle">Python</text><text x="350" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">automation framework</text></g>
+    <g><rect x="490" y="128" width="160" height="108" rx="18" fill="#10243c" stroke="#274466"/><text x="570" y="172" text-anchor="middle">IID Files</text><text x="570" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">IEC 61850</text></g>
+    <g><rect x="710" y="128" width="210" height="108" rx="18" fill="#10243c" stroke="#274466"/><text x="815" y="172" text-anchor="middle">Digital Grid Points</text><text x="815" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">SCD auto-configuration</text></g>
+  </g>
+  <g stroke="#63e6be" stroke-width="4" marker-end="url(#a)"><line x1="215" y1="182" x2="263" y2="182"/><line x1="435" y1="182" x2="483" y2="182"/><line x1="655" y1="182" x2="703" y2="182"/></g>
+  <path d="M130 270 C300 350 640 350 815 270" stroke="#7aa7ff" stroke-width="3" fill="none" stroke-dasharray="8 10"/>
+  <text x="490" y="335" text-anchor="middle" font-family="Inter,Arial" font-size="16" fill="#9fb2c9">Goal: reduce manual configuration work and improve repeatability for smart-grid control data</text>
+</svg>

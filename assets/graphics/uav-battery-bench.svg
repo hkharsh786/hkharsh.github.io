@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" role="img" aria-label="UAV battery qualification test bench architecture">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#63e6be"/><stop offset="1" stop-color="#7aa7ff"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#63e6be"/></marker></defs>
+  <rect width="980" height="430" rx="32" fill="#081625"/>
+  <text x="50" y="58" font-family="Inter,Arial" font-size="28" font-weight="900" fill="#edf4ff">UAV Battery Qualification Bench</text>
+  <g font-family="Inter,Arial" font-weight="800" fill="#edf4ff">
+    <g><rect x="45" y="126" width="170" height="110" rx="18" fill="#10243c" stroke="#274466"/><text x="130" y="170" text-anchor="middle">Power Load</text><text x="130" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">stress conditions</text></g>
+    <g><rect x="285" y="126" width="190" height="110" rx="18" fill="#10243c" stroke="#274466"/><text x="380" y="170" text-anchor="middle">Dummy Battery</text><text x="380" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">BMS + relay PCB + divider</text></g>
+    <g><rect x="545" y="126" width="170" height="110" rx="18" fill="#10243c" stroke="#274466"/><text x="630" y="170" text-anchor="middle">UAV Interface</text><text x="630" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">safety logic</text></g>
+    <g><rect x="775" y="126" width="160" height="110" rx="18" fill="#10243c" stroke="#274466"/><text x="855" y="170" text-anchor="middle">Evidence</text><text x="855" y="200" text-anchor="middle" font-size="13" fill="#9fb2c9">TEP • ATP • report</text></g>
+  </g>
+  <g stroke="#63e6be" stroke-width="4" marker-end="url(#arrow)"><line x1="220" y1="181" x2="278" y2="181"/><line x1="482" y1="181" x2="538" y2="181"/><line x1="722" y1="181" x2="768" y2="181"/></g>
+  <g fill="none" stroke="#7aa7ff" stroke-width="3" opacity=".9"><path d="M380 236 C380 285 630 285 630 236"/><path d="M380 236 C380 315 855 315 855 236"/></g>
+  <g font-family="Inter,Arial" fill="#c7d6e9"><text x="50" y="315" font-size="18" font-weight="800">Test questions</text><text x="50" y="345" font-size="15">• Voltage thresholds for Immediate Landing and Return-to-Home logic</text><text x="50" y="372" font-size="15">• Over-discharge and high-temperature behavior without risking production batteries</text></g>
+</svg>

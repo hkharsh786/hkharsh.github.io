@@ -1,22 +1,59 @@
-# Kumar Harsh Portfolio Website
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+}
 
-This is a static GitHub Pages portfolio site for Kumar Harsh.
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
 
-## Deploy on GitHub Pages
+// Project filters
+const filterButtons = document.querySelectorAll('[data-filter]');
+const projectCards = document.querySelectorAll('[data-category]');
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    projectCards.forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category.includes(filter)) ? '' : 'none';
+    });
+  });
+});
 
-1. Create a GitHub repository named `kumarharsh2070.github.io`.
-2. Upload all files from this folder to the repository root.
-3. Go to **Settings → Pages** and select **Deploy from a branch**.
-4. Select the `main` branch and `/root` folder.
-5. Your site should become available at `https://kumarharsh2070.github.io/`.
-
-If your GitHub username is different, rename the repository and update the GitHub links in `index.html`.
-
-## Included files
-
-- `index.html` - website content
-- `styles.css` - responsive design
-- `script.js` - mobile menu and current year
-- `assets/profile.jpeg` - profile image from the resume
-- `assets/Kumar_Harsh_Professional_Resume.pdf` - downloadable resume
-- `assets/Kumar_Harsh_Professional_Resume.docx` - editable resume source
+// Check optional report PDFs. If the user later uploads PDFs to assets/reports, buttons activate automatically.
+async function checkReportLinks() {
+  const links = document.querySelectorAll('[data-report-file]');
+  for (const link of links) {
+    const status = link.parentElement.querySelector('.report-status');
+    try {
+      const response = await fetch(link.getAttribute('href'), { method: 'HEAD' });
+      if (response.ok) {
+        link.classList.remove('disabled');
+        link.removeAttribute('aria-disabled');
+        if (status) {
+          status.textContent = 'Full PDF is available.';
+          status.classList.remove('missing');
+        }
+      } else {
+        link.classList.add('disabled');
+        link.setAttribute('aria-disabled', 'true');
+        if (status) {
+          status.textContent = 'Full PDF slot is ready. Upload the document with the expected file name to activate this button.';
+          status.classList.add('missing');
+        }
+      }
+    } catch (e) {
+      link.classList.add('disabled');
+      link.setAttribute('aria-disabled', 'true');
+      if (status) {
+        status.textContent = 'Full PDF slot is ready. Upload the document with the expected file name to activate this button.';
+        status.classList.add('missing');
+      }
+    }
+  }
+}
+checkReportLinks();
